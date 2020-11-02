@@ -25,8 +25,3 @@ in the plans to add integration with upwork here
   --- create new item 
   ---else update item
 - save to database
-
-
-
-- dotnet ef migrations add JIssueWorklogAdded -p Jira.Api.Core -s Jira.Api -c DataContext
-- dotnet ef migrations remove -p Jira.Api.Core -s Jira.Api -c DataContext
