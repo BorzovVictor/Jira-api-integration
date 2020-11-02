@@ -1,0 +1,59 @@
+<h2 class="content-block">users</h2>
+
+<div class="dx-card content-block responsive-paddings">
+  <dx-data-grid
+    [dataSource]="apiService.userDataSource"
+    height="600"
+    [allowColumnReordering]="true"
+    [hoverStateEnabled]="true"
+    keyExpr="key"
+    showBorders="true"
+  >
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+<!--    <dxo-group-panel [visible]="true"></dxo-group-panel>-->
+    <dxo-scrolling mode="virtual"></dxo-scrolling>
+    <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
+
+    <dxi-column dataField="avatarUrl"
+                [allowFiltering]="false"
+                [allowSorting]="false"
+                headerCellTemplate="headerTemplate"
+                cellTemplate="cellTemplate">
+    </dxi-column>
+    <dxi-column dataField="name"
+                [visible] = false
+    ></dxi-column>
+    <dxi-column dataField="displayName" caption="Name"></dxi-column>
+    <dxi-column dataField="isActive"></dxi-column>
+    <dxi-column dataField="email"></dxi-column>
+    <dxi-column dataField="timeZone"></dxi-column>
+    <dxi-column dataField="locale"
+                [visible] = false
+    ></dxi-column>
+    <dxi-column dataField="self"
+                [visible] = false
+                caption="Self api link"
+                cellTemplate="cellLinkTemplate"
+    ></dxi-column>
+
+    <dxo-summary>
+      <dxi-total-item
+        column="displayName"
+        summaryType="count">
+      </dxi-total-item>
+    </dxo-summary>
+
+    <div *dxTemplate="let data of 'cellTemplate'" align="center">
+      <img [src]="data.value" height="50" width="50"/>
+    </div>
+    <div *dxTemplate="let data of 'cellLinkTemplate'" align="center">
+      <a [href]="data.value" target="_blank">detail info</a>
+    </div>
+    <div *dxTemplate="let info of 'headerTemplate'" align="center">
+<!--      <p style="font-size:16px">{{info.column.caption}}</p>-->
+      <i class="dx-icon-photo"></i>
+    </div>
+  </dx-data-grid>
+</div>

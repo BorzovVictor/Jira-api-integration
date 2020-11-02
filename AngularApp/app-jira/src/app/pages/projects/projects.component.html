@@ -1,0 +1,53 @@
+<h2 class="content-block">projects</h2>
+<div class="dx-card content-block responsive-paddings">
+  <dx-data-grid
+    [dataSource]="apiService.projectDataSource"
+    height="600"
+    [allowColumnReordering]="true"
+    [hoverStateEnabled]="true"
+    [columnHidingEnabled]="true"
+    keyExpr="id"
+    showBorders="true"
+  >
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <!--    <dxo-group-panel [visible]="true"></dxo-group-panel>-->
+    <dxo-scrolling mode="virtual"></dxo-scrolling>
+    <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
+
+    <dxi-column dataField="id"
+                [width]="140"
+                [visible] = false
+    ></dxi-column>
+    <dxi-column dataField="icon"
+                [width]="80"
+                [allowFiltering]="false"
+                [allowSorting]="false"
+                headerCellTemplate="headerTemplate"
+                cellTemplate="cellTemplate">
+    </dxi-column>
+    <dxi-column dataField="name"></dxi-column>
+    <dxi-column dataField="key" [width]="120"></dxi-column>
+    <dxi-column dataField="projectTypeKey" [width]="120"></dxi-column>
+    <dxi-column dataField="simplified" [visible]="false" [width]="120"></dxi-column>
+    <dxi-column dataField="style" [width]="120"></dxi-column>
+    <dxi-column dataField="isPrivate" [visible]="false" [width]="120"></dxi-column>
+
+    <dxo-summary>
+      <dxi-total-item
+        column="Name"
+        summaryType="count">
+      </dxi-total-item>
+    </dxo-summary>
+
+    <div *dxTemplate="let data of 'cellTemplate'" align="center">
+      <img [src]="data.value" height="50" width="50"/>
+    </div>
+    <div *dxTemplate="let info of 'headerTemplate'" align="center">
+      <!--      <p style="font-size:16px">{{info.column.caption}}</p>-->
+      <i class="dx-icon-photo"></i>
+    </div>
+  </dx-data-grid>
+</div>
+

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jira.Api", "Jira.Api\Jira.Api.csproj", "{FF38136C-42C0-4692-8274-E7BF35C18622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jira.Api.Core", "Jira.Api.Core\Jira.Api.Core.csproj", "{0DC90F94-5295-4E2A-BF46-43BAB1A9DDC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jira.Api.Infrastructure", "Jira.Api.Infrastructure\Jira.Api.Infrastructure.csproj", "{6E2A1B87-D439-403E-9BA7-46A9215EE9B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF38136C-42C0-4692-8274-E7BF35C18622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF38136C-42C0-4692-8274-E7BF35C18622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF38136C-42C0-4692-8274-E7BF35C18622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF38136C-42C0-4692-8274-E7BF35C18622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC90F94-5295-4E2A-BF46-43BAB1A9DDC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC90F94-5295-4E2A-BF46-43BAB1A9DDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC90F94-5295-4E2A-BF46-43BAB1A9DDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC90F94-5295-4E2A-BF46-43BAB1A9DDC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E2A1B87-D439-403E-9BA7-46A9215EE9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E2A1B87-D439-403E-9BA7-46A9215EE9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E2A1B87-D439-403E-9BA7-46A9215EE9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E2A1B87-D439-403E-9BA7-46A9215EE9B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

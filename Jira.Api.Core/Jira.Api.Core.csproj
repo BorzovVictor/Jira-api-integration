@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <RootNamespace>Jira.Core</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Interfaces" />
+      <Folder Include="Models" />
+      <Folder Include="Services" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.EntityFrameworkCore, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+        <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore\2.2.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Sqls\CreateLogin.sql">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Sqls\dropHangFire.sql">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Sqls\install.sql">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>
